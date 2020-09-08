@@ -1,0 +1,35 @@
+﻿@model WebApplication1.Models.LoginResponse
+
+
+@{
+    ViewBag.Title = "Login Response";
+}
+
+Login Proccess <br />
+
+
+@{
+    if (Model.error == null)
+    {
+        <div class="alert alert-success" role="alert">
+            <strong>Well done!</strong> You successfully login Sap via Service Layer.
+
+
+            <div>Giriş işlemi başarılı, Session id : @Model.SessionId</div>
+        
+        </div>
+    }
+    else
+    {
+
+        <div class="alert alert-danger" role="alert">
+            <strong>Wrong Login!</strong> Wrong login info
+
+            <div>Giriş başarısız. <br /> Hata Kodu : @Model.error.code <br />     Hata : @Model.error.message.value</div>
+        
+        </div>
+    }
+
+}
+
+

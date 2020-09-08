@@ -1,0 +1,25 @@
+﻿@model WebApplication1.Models.LoginRequest
+@{
+    ViewBag.Title = "Sap login screen";
+}
+
+<body class="text-center">
+    <form class="form-signin" action="/Home/LoginRequest" method="post" style="width:300px">
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <label for="ServiceLayerUrl" class="sr-only">CompanyDB</label>
+        <input id="ServiceLayerUrl" name="ServiceLayerUrl" class="form-control" placeholder="Sap ServiceLayerUrl" required autofocus value="https://localhost:50000/b1s/v1/Login">
+        <label for="CompanyDB" class="sr-only">CompanyDB</label>
+        <input id="CompanyDB" name="CompanyDB" class="form-control" placeholder="Sap CompanyDB" required autofocus value="SBODemoTR">
+        <label for="UserName" class="sr-only">Username</label>
+        <input id="UserName" name="UserName" class="form-control" placeholder="Sap Username" required autofocus >
+        <label for="Password" class="sr-only">Password</label>
+        <input type="Password" id="Password" name="Password" class="form-control" placeholder="Password" required>
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sap Login</button>
+        <p class="mt-5 mb-3 text-muted">&copy;2020</p>
+    </form>
+</body>
